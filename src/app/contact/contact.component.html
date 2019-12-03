@@ -16,17 +16,20 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="contactParams" name="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit"(click)="searchContact(contactParams)">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+        [(ngModel)]="contactParams" name="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+        (click)="searchContact(contactParams)">Search</button>
     </form>
   </div>
 </nav>
 <ul class="nav justify-content-end nav-action-container">
   <li class="nav-item">
-    <button type="button" class="btn btn-primary contact-button"(click)="loadContacts()">Load Contacts</button>
+    <button type="button" class="btn btn-primary contact-button" (click)="loadContacts()">Load Contacts</button>
   </li>
   <li class="nav-item">
-    <button type="button" class="btn btn-primary contact-button"(click)="saveItemsToLocalStorge(contacts)">Save All</button>
+    <button type="button" class="btn btn-primary contact-button" (click)="saveItemsToLocalStorge(contacts)">Save
+      All</button>
 
   </li>
   <li class="nav-item">
@@ -80,10 +83,10 @@
             aria-describedby="basic-addon1">
         </td>
         <td *ngIf="contact.editing">
-          <div  class="btn-group">
-          <button type="button" class="btn btn-outline-danger my-2 my-sm-0" (click)="deleteContact(i)">X</button>
-          <button type="button" class="btn btn-outline-success my-2 my-sm-0"
-            (click)="saveContact(contact)">Save</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-danger my-2 my-sm-0" (click)="deleteContact(i)">X</button>
+            <button type="button" class="btn btn-outline-success my-2 my-sm-0"
+              (click)="saveContact(contact)">Save</button>
           </div>
         </td>
       </tr>
